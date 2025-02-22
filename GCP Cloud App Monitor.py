@@ -1,3 +1,48 @@
+To use this script, you'll need to:
+Install the required packages:
+
+pip install google-cloud-monitoring
+pip install google-cloud-error-reporting
+pip install google-cloud-logging
+pip install google-cloud-compute
+
+
+
+
+This GCP monitoring script provides:
+
+Instance Monitoring:
+
+CPU usage
+Memory usage
+Instance status
+Zone information
+
+
+Error Monitoring:
+
+Recent error reports
+Error counts and first occurrence
+Error messages
+
+
+Log Monitoring:
+Recent error logs
+Timestamp and message details
+
+
+Set up authentication:
+
+Either set the GOOGLE_APPLICATION_CREDENTIALS environment variable pointing to your service account key file
+Or run gcloud auth application-default login
+
+Update the project_id variable with your GCP project ID
+Run the script:
+python gcp_monitor.py
+
+*******
+
+--GCP Cloud App Monitor
 from google.cloud import monitoring_v3
 from google.cloud import error_reporting_v1beta1
 from google.cloud import logging_v2
