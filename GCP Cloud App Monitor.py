@@ -1,43 +1,73 @@
-To use this script, you'll need to:
-Install the required packages:
+Features:
 
-pip install google-cloud-monitoring
-pip install google-cloud-error-reporting
-pip install google-cloud-logging
-pip install google-cloud-compute
+Network Monitoring:
 
+Bytes received/sent
+Network throughput tracking
 
 
+Cloud Storage Monitoring:
 
-This GCP monitoring script provides:
+Bucket statistics
+Object counts
+Storage usage
+Storage class information
 
-Instance Monitoring:
 
-CPU usage
-Memory usage
+Cloud SQL Monitoring:
+
 Instance status
-Zone information
+Database version
+Configuration settings
+Availability type
 
 
-Error Monitoring:
+Cloud Run Monitoring:
 
-Recent error reports
-Error counts and first occurrence
-Error messages
-
-
-Log Monitoring:
-Recent error logs
-Timestamp and message details
+Service status
+Traffic distribution
+Latest revisions
+Service URLs
 
 
-Set up authentication:
+Custom Metrics:
 
-Either set the GOOGLE_APPLICATION_CREDENTIALS environment variable pointing to your service account key file
-Or run gcloud auth application-default login
+Support for user-defined metrics
+Flexible metric filtering
+Label tracking
 
-Update the project_id variable with your GCP project ID
-Run the script:
+
+Alert Notifications:
+
+Email notifications for critical events
+Configurable thresholds
+Error count alerts
+Performance alerts
+
+
+Performance Monitoring:
+
+CPU thresholds
+Memory usage tracking
+Error rate monitoring
+
+
+
+To use the enhanced version:
+
+Install additional dependencies:
+
+pip install google-cloud-storage
+pip install google-cloud-sql
+pip install google-cloud-run
+
+export SMTP_SERVER="smtp.gmail.com"
+export SMTP_PORT="587"
+export SMTP_USERNAME="your-email@gmail.com"
+export SMTP_PASSWORD="your-app-password"
+
+
+
 python gcp_monitor.py
 
 *******
